@@ -82,3 +82,9 @@ enter_deploy_container: deploy_image
 	-v $$PWD:/host \
 	-w /host \
 	feature-flipper-server-deploy /bin/bash
+
+start-ff-private-api:
+	docker-compose up --build
+
+stop-ff-private-api:
+	docker-compose down
